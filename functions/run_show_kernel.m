@@ -79,9 +79,6 @@ if ~isempty(opt.max_coh)
     coh = coh(ind);
     fluc = fluc(ind);
     resp = resp(ind);
-    fprintf('Using coherence:');
-    fprintf('%g, ', unique(abs(coh)));
-    fprintf('\n');
 end
 
 ntrial = length(fluc);

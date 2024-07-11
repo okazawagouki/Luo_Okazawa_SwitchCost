@@ -1,4 +1,4 @@
-# Data and code for Luo et al. (2023)
+# Data and code for Luo et al.
 
 This repository contains data and test code for the following paper:
 
@@ -9,31 +9,42 @@ Luo T, Xu M, Zheng Z, Okazawa G (2023) Limitation of switching sensory informati
 
 The data are saved as MATLAB v7 mat file format.
 
-The code is tested under MATLAB R2019b. Requires Statistics and Machine Learning Toolbox.
+The code is tested under MATLAB R2019b on Windows. Requires Statistics and Machine Learning Toolbox.
 
-## Main dataset
+## Dataset
 
-[data.mat](./data/preproc/data.mat): Behavioral data collected from eight human participants in context-dependent face categorization task.
+[context_dependent_face_categorization_task.mat](./data/preproc/context_dependent_face_categorization_task.mat): Behavioral data collected from eight human participants in context-dependent face categorization task. Reported in Fig. 2-4. This dataset contains the following basic task parameters:
 
-The dataset contains followings:
+* cond: Task rule (either 1 or 2).
+* cond_switch: 1 for non-switch trial, 2 for switch trial.
+* csi: Cue-stimulus interval (s).
+* fluc: Fluctuation of stimulus strength within each trial in the main context dependent face categorization task (identity/age vs. expression). The matrix (number of frames $\times$ 6) contains fluctuation of three facial features along two task axes.
+* morph_level: Stimulus strength along two task axes.
+* resp: Participants' choice (either 1 or 2).
+* result: Result of a trial.
+* rt: Participants' reaction time (s).
+* subj: Participants' ID.
+* targ_cor: Correct target (either 1 or 2).
 
-* cond (trial $\times$ 1): Task rule (either 1 or 2).
-* cond_switch (trial $\times$ 1): 1 for non-switch trial, 2 for switch trial.
-* csi (trial $\times$ 1): Cue-stimulus interval (s).
-* fluc (trial $\times$ 1): Fluctuation of stimulus strength within each trial. In each cell, there is a matrix (number of frames $\times$ 6) which contains fluctuation of three facial features along two task axes.
-* morph_level (trial $\times$ 2): Stimulus strength along two task axes.
-* resp (trial $\times$ 1): Participants' choice (either 1 or 2).
-* result (trial $\times$ 1): Result of a trial (either CORRECT, WRONG, NOFIX, FIXBREAK, or NOCHOICE).
-* rt (trial $\times$ 1): Participants' reaction time (s).
-* subj (trial $\times$ 1): Participants' ID.
-* targ_cor (trial $\times$ 1): Correct target (either 1 or 2).
+[fixed_stimulus_duration_task.mat](./data/preproc/fixed_stimulus_duration_task.mat): Seven human participants in total. Reported in Fig. 5. This dataset contains the basic task parameters above.
 
-## Test code
+[identity_versus_color.mat](./data/preproc/identity_versus_color.mat): Seven human participants in total. Reported in Fig. 6. Besides the basic task paramters, this dataset contains:
 
-[code.m](./code.m): The code will generate key figures of the paper. It will take a few seconds to generate the figures. Expected outcome of the figures is in the "figures" folder.
+* fluc_face: Fluctuation of stimulus strength along identity axis within each trial. The matrix (number of frames $\times$ 3) contains fluctuation of three facial features.
+* fluc_color: Fluctuation along color axis.
 
-* Generate psychometric and chronometric functions averaged across participants.
-* Generate psychophysical kernels.
+[motion_versus_color.mat](./data/preproc/motion_versus_color.mat): Seven human participants in total. Reported in Fig. 6. Besides the basic task paramters, this dataset contains:
+
+* motion_energy: The quantification of the fluctuating motion coherence of the random dots.
+* fluc_color: The quantification of the fluctuating color coherence of the random dots.
+
+
+## Code
+
+[fig2.m](./fig2.mat): The code will generate figures in Fig. 2. It will take a few seconds to generate the figures.
+
+Similarly, fig*.m will generate the corresponding figures reported in the paper. Figures related to model fitting result are more time-consuming, which may take a few minutes on a regular personal computer.
+
 
 ## Contact
 
