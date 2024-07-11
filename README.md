@@ -43,8 +43,7 @@ The code is tested under MATLAB R2019b on Windows. Requires Statistics and Machi
 
 [fig2.m](./fig2.mat): The code will generate figures in Fig. 2. It will take a few seconds to generate the figures.
 
-Similarly, fig*.m will generate the corresponding figures reported in the paper. Figures related to model fitting result are more time-consuming, which may take a few minutes on a regular personal computer.
-
+Similarly, fig*.m will generate the corresponding figures reported in the paper. 
 
 ## Contact
 
