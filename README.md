@@ -45,6 +45,8 @@ The code is tested under MATLAB R2019b on Windows. Requires Statistics and Machi
 
 Similarly, fig*.m will generate the corresponding figures reported in the paper. 
 
+For the DDM fitting part, please check [https://github.com/okazawagouki/DDM_fit_Psych_Kernel](https://github.com/okazawagouki/DDM_fit_Psych_Kernel)
+
 ## Contact
 
 For questions or further inquiry about the dataset and code, please contact the first or lead author (luotl2021@ion.ac.cn, okazawa@ion.ac.cn).
@@ -52,3 +54,4 @@ For questions or further inquiry about the dataset and code, please contact the 
 ## License
 
 This material, including all data and code associated with this research, is protected under copyright. All rights are reserved by the authors. Upon the publication of the paper, the authors will distribute this material under a CC-BY 4.0 license.
+
